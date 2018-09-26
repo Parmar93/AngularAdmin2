@@ -1,0 +1,43 @@
+$topnav-background-color: #11b8cc;
+$headerTextColor :#fff;
+:host {
+    .navbar {
+        background-color: $topnav-background-color;
+        .navbar-nav .dropdown-item {
+            padding: 6px 15px;
+            font-size: 14px;
+        }
+        .navbar-brand {
+            color: #fff;
+        }
+        .nav-item>a {
+            color: $headerTextColor;
+            &:hover {
+                color: $headerTextColor;
+            }
+        }
+    }
+    .messages {
+        width: 300px;
+        .media {
+            border-bottom: 1px solid #ddd;
+            padding: 5px 10px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .media-body {
+            h5 {
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .small {
+                margin: 0;
+            }
+            .last {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+}

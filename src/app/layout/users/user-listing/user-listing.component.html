@@ -1,0 +1,133 @@
+<app-page-header [heading]="'Users'" [icon]="'fa-users'">
+</app-page-header>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="pull-right">
+                    <button type="button" title="Filter" (click)="animate()" class="a-link btn btn-default" [class.active]="isActive"><i class="fa fa-plus-circle"></i> Filter</button>
+                </div>
+            </div>
+
+            <!-- Filter form -->
+            <div class="filter-form" [@filterAnimation]='state'>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <mat-form-field>
+                            <mat-select placeholder="Status">
+                                <mat-option *ngFor="let status of statusAll" [value]="status.value">
+                                    {{status.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <mat-form-field>
+                            <mat-select placeholder="Country">
+                                <mat-option *ngFor="let country of countries" [value]="country.value">
+                                    {{country.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <mat-form-field class="example-full-width">
+                            <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker" placeholder="From">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <mat-form-field class="example-full-width">
+                            <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker2" placeholder="To">
+                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <button type="button" id="applyFilter" class="btn btn-default">Reset</button>
+                        <button type="button" id="cancel_btn" (click)="closeFilter()" class="btn btn-hide">Close</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Filter form -->
+
+
+            <div class="card-body table-responsive">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="pull-left">
+                            <mat-form-field>
+                                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Name, Email, Contact">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                    </div>
+                </div>
+
+                <!-- dataTable -->
+                <div class="mat-elevation-z8 table-container">
+                    <table mat-table [dataSource]="dataSource" matSort>
+
+
+                        <ng-container matColumnDef="id" sticky>
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+
+                        </ng-container>
+
+
+                        <ng-container matColumnDef="progress" sticky>
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
+                            <td mat-cell *matCellDef="let row">{{row.progress}}%</td>
+                        </ng-container>
+
+
+                        <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                            <td mat-cell *matCellDef="let row"><a [routerLink]="['./details']" class="a-link"> {{row.name}} </a> </td>
+                        </ng-container>
+                        <ng-container matColumnDef="name2">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name2 </th>
+                            <td mat-cell *matCellDef="let row"><a [routerLink]="['./details']" class="a-link"> {{row.name}} </a> </td>
+                        </ng-container>
+                        <ng-container matColumnDef="address">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+                            <td mat-cell *matCellDef="let row"><a [routerLink]="['./details']" class="a-link"> {{row.name}} </a> </td>
+                        </ng-container>
+                        <ng-container matColumnDef="address1">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Address1 </th>
+                            <td mat-cell *matCellDef="let row"><a [routerLink]="['./details']" class="a-link"> {{row.name}} </a> </td>
+                        </ng-container>
+                        <ng-container matColumnDef="address2">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Address2 </th>
+                            <td mat-cell *matCellDef="let row"><a [routerLink]="['./details']" class="a-link"> {{row.name}} </a> </td>
+                        </ng-container>
+                        <ng-container matColumnDef="address3">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Address3 </th>
+                            <td mat-cell *matCellDef="let row"><a [routerLink]="['./details']" class="a-link"> {{row.name}} </a> </td>
+                        </ng-container>
+
+
+                        <ng-container matColumnDef="color" stickyEnd>
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>
+                            <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                    </table>
+
+                    <!-- <div class="pull-left showing-content">
+                        Showing 1 to 10 of 1,571 entries (filtered from 1,606 total entries)
+                    </div> -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

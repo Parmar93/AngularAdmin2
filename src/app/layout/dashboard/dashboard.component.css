@@ -1,0 +1,108 @@
+.card-stats .card-header.card-header-icon,
+.card-stats .card-header.card-header-text {
+    text-align: right;
+}
+
+.social-icn {
+    width: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.card-icon.card-icon1 {
+    background: #3b5999;
+    -webkit-box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(59, 89, 153, 0.4);
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(59, 89, 153, 0.4);
+}
+
+.card-icon.card-icon2 {
+    background: #0077B5;
+    -webkit-box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 119, 181, 0.4);
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 119, 181, 0.4);
+}
+
+.card-icon.card-icon3 {
+    background: #e4405f;
+    -webkit-box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(228, 64, 95, 0.4);
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(228, 64, 95, 0.4);
+}
+
+.card-icon.card-icon4 {
+    background: linear-gradient(60deg, #26c6da, #00acc1);
+    -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(0, 188, 212, .4);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(0, 188, 212, .4);
+}
+
+.card.card-stats {
+    margin: 40px 0;
+}
+
+.stats {
+    font-size: 13px;
+    color: #999;
+}
+
+.card-category {
+    margin: 0 0 5px 0;
+    color: #999;
+}
+
+.card-title {
+    font-size: 25px;
+}
+
+.card-stats .card-header {
+    background: none;
+    border: none;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 0px 4px 0 rgba(0, 0, 0, .14);
+}
+
+.card-stats .card-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    background: none;
+    padding: 12px 0;
+    margin: 0px 20px;
+}
+
+.social-icn svg {
+    width: 100%;
+    height: 100%;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.card-icon {
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    top: -20px;
+    left: 15px;
+}
+
+.card-footer {
+    border: none
+}
+
+agm-map {
+    height: 500px;
+}

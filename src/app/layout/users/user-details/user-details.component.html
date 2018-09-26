@@ -1,0 +1,304 @@
+<app-page-header [heading]="'Users'" [icon]="'fa-users'">
+</app-page-header>
+<div class="row">
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="box-body box-profile">
+                    <img class="profile-user-img img-responsive img-circle" src="assets/images/profile-user.jpg" alt="User profile picture">
+
+                    <h3 class="profile-username text-center">User Name</h3>
+
+                    <p class="text-muted text-center">RCC User</p>
+
+                    <ul class="list-group list-group-unbordered">
+                        <li class="list-group-item">
+                            <b>Followers</b> <a class="pull-right">1,322</a>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Following</b> <a class="pull-right">543</a>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Friends</b> <a class="pull-right">13,287</a>
+                        </li>
+                    </ul>
+
+                    <div class="rating_wrap clearfix">
+                        <div class="star-width-sec">
+                            <div class="stars_scores">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="card">
+            <div class="card-body card-minhght">
+                <mat-tab-group>
+                    <mat-tab label="About">
+                        <div class="user-detail-panell">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="admin-label">Name</label>
+                                        <div class="input-holder">
+                                            <span class="text-detail">yjL89bU79X X2jNpMxhFE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="admin-label">Email ID</label>
+                                        <div class="input-holder">
+                                            <span class="text-detail">0p6KmrYRj4@gmail.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="admin-label">Status</label>
+                                        <div class="input-holder">
+                                            <span class="text-detail">Active</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="admin-label">Gender</label>
+                                        <div class="input-holder">
+                                            <span class="text-detail">Female</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="admin-label">Address</label>
+                                        <div class="input-holder">
+                                            <span class="text-detail">zA8eIQeRX7EL0XsdKg3YlihU2yOe4W</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="admin-label">Phone Number</label>
+                                        <div class="input-holder">
+                                            <span class="text-detail">N/A</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="admin-label">Age</label>
+                                        <div class="input-holder">
+                                            <span class="text-detail">82</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="admin-label">Register Date</label>
+                                        <div class="input-holder">
+                                            <span class="text-detail">28 Dec 2018</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12 col-xs-12">
+                                    <div class="btn-lists clearfix">
+                                        <ul>
+                                            <li>
+                                                <div class="button-wrapper">
+                                                    <button mat-raised-button (click)="openDialog()" id="block_user" class="btn btn-warning"><i class="fa fa-lock"></i> Block</button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="button-wrapper">
+                                                    <button (click)="openDialog()" id="delete_user" class="btn btn-danger" mat-raised-button><i class="fa fa-trash"></i> Delete</button>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="button-wrapper">
+                                                    <a href="javascript:void(0)" id="sendNotification" class="btn btn-default" (click)="animate()"><i class="fa fa-paper-plane" [class.active]="isActive"></i> Send Notification</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </mat-tab>
+                    <mat-tab label="Address">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="admin-label">Address 1</label>
+                                    <div class="input-holder">
+                                        <span class="text-detail"> 101, Harsh Bhawan, 64-65, Nehru Place, New Delhi, Delhi 110019</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="admin-label">Address 1</label>
+                                    <div class="input-holder">
+                                        <span class="text-detail"> 101, Harsh Bhawan, 64-65, Nehru Place, New Delhi, Delhi 110019</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+                <!-- Notification form -->
+                <div class="filter-form" [@filterAnimation]='state'>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Notification title" value="">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Enter link" value="">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                            <mat-form-field class="example-full-width">
+                                <textarea matInput placeholder="Message"></textarea>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12">
+                            <button type="button" id="applyFilter" class="btn btn-default">Send</button>
+                            <button type="button" id="cancel_btn" (click)="closeFilter()" class="btn btn-hide">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Notification form -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="detail-table">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Subcriptions</div>
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th>Registered On</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>John</td>
+                            <td>abc@gmail.com</td>
+                            <td>1234567890</td>
+                            <td>1-1-2018</td>
+                            <td><span class="label-active">Active</span></td>
+                            <td><a title="Block" href="javascript:void(0); "><i class="fa fa-lock"></i></a>
+                                <a title="Delete" href="javascript:void(0);"><i class="fa fa-trash"></i></a></td>
+
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>John</td>
+                            <td>John</td>
+                            <td>abc@gmail.com</td>
+                            <td>1234567890</td>
+                            <td>1-1-2018</td>
+                            <td><span class="label-active">Active</span></td>
+                            <td><a title="Block" href="javascript:void(0); "><i class="fa fa-lock"></i></a>
+                                <a title="Delete" href="javascript:void(0);"><i class="fa fa-trash"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>John</td>
+                            <td>John</td>
+                            <td>abc@gmail.com</td>
+                            <td>1234567890</td>
+                            <td>1-1-2018</td>
+                            <td><span class="label-active">Active</span></td>
+                            <td><a title="Block" href="javascript:void(0); "><i class="fa fa-lock"></i></a>
+                                <a title="Delete" href="javascript:void(0);"><i class="fa fa-trash"></i></a></td>
+
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>John</td>
+                            <td>John</td>
+                            <td>abc@gmail.com</td>
+                            <td>1234567890</td>
+                            <td>1-1-2018</td>
+                            <td><span class="label-active">Active</span></td>
+                            <td><a title="Block" href="javascript:void(0); "><i class="fa fa-lock"></i></a>
+                                <a title="Delete" href="javascript:void(0);"><i class="fa fa-trash"></i></a></td>
+
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>John</td>
+                            <td>John</td>
+                            <td>abc@gmail.com</td>
+                            <td>1234567890</td>
+                            <td>1-1-2018</td>
+                            <td><span class="label-active">Active</span></td>
+                            <td><a title="Block" href="javascript:void(0); "><i class="fa fa-lock"></i></a>
+                                <a title="Delete" href="javascript:void(0);"><i class="fa fa-trash"></i></a></td>
+
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>John</td>
+                            <td>John</td>
+                            <td>abc@gmail.com</td>
+                            <td>1234567890</td>
+                            <td>1-1-2018</td>
+                            <td><span class="label-active">Active</span></td>
+                            <td><a title="Block" href="javascript:void(0); "><i class="fa fa-lock"></i></a>
+                                <a title="Delete" href="javascript:void(0);"><i class="fa fa-trash"></i></a></td>
+
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>John</td>
+                            <td>John</td>
+                            <td>abc@gmail.com</td>
+                            <td>1234567890</td>
+                            <td>1-1-2018</td>
+                            <td><span class="label-active">Active</span></td>
+                            <td><a title="Block" href="javascript:void(0); "><i class="fa fa-lock"></i></a>
+                                <a title="Delete" href="javascript:void(0);"><i class="fa fa-trash"></i></a></td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

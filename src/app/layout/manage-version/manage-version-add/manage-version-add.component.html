@@ -1,0 +1,63 @@
+<app-page-header [heading]="'Manage Version'" [icon]="'fa-file'">
+</app-page-header>
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-8 col-xs-12">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="*Version Name" value="">
+                </mat-form-field>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="*Title" value="">
+                </mat-form-field>
+
+            </div>
+            <div class="top-margin"></div>
+            <div class="col-sm-12 col-xs-12">
+                <mat-form-field class="example-full-width">
+                    <textarea matInput placeholder="Leave a comment"></textarea>
+                </mat-form-field>
+            </div>
+            <div class="top-margin"></div>
+            <div class="col-sm-4 col-xs-12">
+                <mat-form-field>
+                    <mat-select placeholder="Platform">
+                        <mat-option *ngFor="let platform of platforms" [value]="platform.value">
+                            {{platform.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <mat-form-field>
+                    <mat-select placeholder="update">
+                        <mat-option *ngFor="let update of updates" [value]="update.value">
+                            {{update.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <mat-form-field>
+                    <mat-select placeholder="Is current Version">
+                        <mat-option *ngFor="let version of versions" [value]="version.value">
+                            {{version.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-xs-12">
+                <div class="btn-lists clearfix">
+                    <ul>
+                        <li><button type="submit" class="btn btn-default">Save</button></li>
+                        <li><a class="btn btn-hide" href="#">Cancel</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

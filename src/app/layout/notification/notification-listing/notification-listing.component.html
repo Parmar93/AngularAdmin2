@@ -1,0 +1,67 @@
+<app-page-header [heading]="'Notification'" [icon]="'fa-bell'">
+</app-page-header>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="pull-right">
+                    <a [routerLink]="['./add']" title="Add New Content" class="a-link btn btn-default"><i class="fa fa-plus-circle"></i> Add</a>
+                </div>
+            </div>
+
+            <div class="card-body table-responsive">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="pull-left">
+                            <mat-form-field>
+                                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Name, Email, Contact">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                    </div>
+                </div>
+                <!-- DataTable -->
+                <div class="mat-elevation-z8">
+                    <table mat-table [dataSource]="dataSource" matSort>
+
+                        <ng-container matColumnDef="id">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                            <td mat-cell *matCellDef="let row">{{row.id}}</td>
+
+                        </ng-container>
+
+
+                        <ng-container matColumnDef="progress">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
+                            <td mat-cell *matCellDef="let row">{{row.progress}}%</td>
+                        </ng-container>
+
+
+                        <ng-container matColumnDef="name">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                            <td mat-cell *matCellDef="let row">{{row.name}}</td>
+                        </ng-container>
+
+
+                        <ng-container matColumnDef="color">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>
+                            <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                        </tr>
+                    </table>
+
+                    <!-- <div class="pull-left showing-content">
+                            Showing 1 to 10 of 1,571 entries (filtered from 1,606 total entries)
+                        </div> -->
+
+                    <!-- DataTable -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

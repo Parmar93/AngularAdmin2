@@ -1,0 +1,87 @@
+<div class="login-page" [@routerTransition]>
+
+
+
+
+    <div class="form-bg-container">
+        <div class="form-wraper">
+            <div class="logo-wrapper">
+                <div class="verticle-table">
+                    <div class="verticle-table-cell">
+                        <img src="assets/images/logo.png" alt="Logo" />
+                        <p>RCC is a solution-oriented architectured.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fields-wrapper">
+                <div class="fields-inner-wrapper">
+
+                    <form class="login-form-wrapper" [@LoginFormAnimation]='state'>
+                        <h1>Login</h1>
+                        <span>Enter your details below to access 
+                                     your account.</span>
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Email address" type="email">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Password" type="password">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <mat-checkbox class="remember">Remember</mat-checkbox>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pull-right">
+                                <div class="form-group">
+                                    <button type="button" title="Forgot Password" (click)="openform()" class="forgot-pass pull-right" [class.active]="isActive">Forgot Password</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pull-left">
+                                <button type="submit" [routerLink]="['/dashboard']" class="btn pull-left btn-default" (click)="onLoggedin()">Log in</button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                    <!-- Forgot password Form starts-->
+                    <form class="forgot-form-wrapper" [@formAnimation]='state'>
+                        <h1>FORGOT PASSWORD</h1>
+                        <span>Forgot your password? Don't Worry. 
+                                Send us your registered email address and we will send you steps to reset your password.</span>
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Email address" type="email">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 pull-left">
+                                <div class="btn-lists clearfix">
+                                    <ul>
+                                        <li><button type="submit" [routerLink]="['/dashboard']" class="btn pull-left btn-default">Log in</button></li>
+                                        <li> <a class="btn pull-left btn-hide" (click)="closeform()"> Back </a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Forgot password Form ends-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
